@@ -1,0 +1,29 @@
+.chat-main
+  .main-header
+    .main-header__left-box
+      .main-header__left-box__current-group
+        sample-group
+      .main-header__left-box__member-list
+        Member:
+        .main-header__left-box__member-list__member
+          sample-name
+    .main-header__edit
+      = link_to "#", class: "main-header__edit__btn" do
+        Edit
+  .main-message
+    .main-message__box
+      .main-message__box__upper-info
+        .main-message__box__upper-info__talker
+          sample-name
+        .main-message__box__upper-info__date
+          sample-date
+      .main-message__box__text
+        sample-text
+  .main-form
+    .main-form__new-message
+      %form.main-form__new-message__form
+        %input.main-form__new-message__form__text
+        %label.main-form__new-message__form__image
+          = fa_icon 'image', class: "main-form__new-message__form__image__font"
+          %input.main-form__new-message__form__image__input{type: "file"}
+        %input.main-form__new-message__form__submit{type: "submit"}
