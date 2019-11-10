@@ -9,8 +9,10 @@
         = link_to edit_user_path(current_user), class: "side-header__box__menu__cog" do
           = fa_icon 'cog', class: "side-header__box__menu__icon"
   .side-group
-    .side-group__box
-      .side-group__box__group-name
-        sample-group
-      .side-group__box__message
-        sample-message
+    - current_user.groups.each do |group|
+      .side-group__box
+        = link_to '#' do
+          .side-group__box__group-name
+            = group.name
+          .side-group__box__message
+            メッセージはまだありません。
