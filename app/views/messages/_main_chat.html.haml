@@ -19,11 +19,11 @@
           sample-date
       .main-message__box__text
         sample-text
-  .main-form
-    .main-form__new-message
-      %form.main-form__new-message__form
-        %input.main-form__new-message__form__text
-        %label.main-form__new-message__form__image
-          = fa_icon 'image', class: "main-form__new-message__form__image__font"
-          %input.main-form__new-message__form__image__input{type: "file"}
-        %input.main-form__new-message__form__submit{type: "submit"}
+  .form
+    = form_for [@group, @message] do |f|
+      = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+      .form__mask
+        = f.label :image, class: 'form__mask__image' do
+          = fa_icon 'image', class: 'icon'
+          = f.file_field :image, class: 'hidden'
+      = f.submit 'Send', class: 'form__submit'
