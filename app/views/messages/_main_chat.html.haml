@@ -2,11 +2,12 @@
   .main-header
     .main-header__left-box
       .main-header__left-box__current-group
-        sample-group
+        = @group.name
       .main-header__left-box__member-list
         Member:
         .main-header__left-box__member-list__member
-          sample-name
+          - @group.users.each do |user|
+            = user.name
     .main-header__edit
       = link_to edit_group_path(params[:group_id]), class: "main-header__edit__btn" do
         Edit
