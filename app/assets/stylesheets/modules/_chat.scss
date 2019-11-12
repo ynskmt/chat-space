@@ -60,41 +60,41 @@
   }
 }
 
-.main-form {
+.form {
   height: 90px;
   background-color: #ddd;
-  &__new-message {
-    padding: 20px 40px;
-    &__form {
-      display: flex;
-      &__text {
-        height: 50px;
-        width: 100%;
-        padding: 0 40px 0 10px;
-        color: $black;
-        border-style: none;
-      }
-      &__image {
-        position: relative;
-        font-size: 1.3rem;
-        &__font {
-          position: absolute;
-          top: 15px;
-          right: 10px;
-          font-size: inherit;
-        }
-        &__input {
-          display: none;
-        }
-      }
-      &__submit {
-        width: 100px;
-        height: 50px;
-        padding: 0 30px;
-        margin-left: 15px;
-        background-color: $light_blue;
-        color: $white;
-      }
+  &__message {
+    height: 50px;
+    width: 100%;
+    padding: 0 40px 0 10px;
+    color: $black;
+    border-style: none;
+  }
+  &__mask {
+    position: relative;
+    font-size: 1.3rem;
+    &__image {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: inherit;
     }
   }
+  &__submit {
+    width: 100px;
+    height: 50px;
+    padding: 0 30px;
+    margin-left: 15px;
+    background-color: $light_blue;
+    color: $white;
+  }
+}
+
+.hidden {
+display: none;
+}
+
+.new_message {
+  display: flex;
+  padding: 20px 40px;
 }
