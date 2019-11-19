@@ -38,6 +38,10 @@ $(function(){
       $(".main-message").append(html);
       $(".form__message").val('');
       $(".form__submit").prop('disabled', false);
+      $('.main-message').animate({scrollTop: $('.main-message')[0].scrollHeight}, 'fast');
+    })
+    .fail(function() {
+      alert("メッセージ送信に失敗しました");
     })
   })
 })
