@@ -27,6 +27,7 @@
 .side-group {
   background-color: $side_blue_light;
   height: calc(100vh - 100px);
+  overflow: scroll;
   &__box {
     padding: 20px 20px 0;
     margin-bottom: 40px;

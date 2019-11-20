@@ -37,6 +37,7 @@
 .main-message {
   height: calc(100vh - 190px);
   background-color: #fafafa;
+  overflow: scroll;
   &__box {
     padding: 46px 40px;
     &__upper-info {
