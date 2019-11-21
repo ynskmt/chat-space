@@ -1,8 +1,8 @@
 $(function(){
 
   function buildHTML(message) {
-    image = (message.image) ? `<img class= "lower-message__image" src=${message.image} >` : "";
-    let html = `<div class="main-message__box">
+    let image = message.image ? `<img class= "lower-message__image" src=${message.image} >` : "";
+    let html = `<div class="main-message__box" data-message-id="${message.id}">
                   <div class="main-message__box__upper-info">
                     <div class="main-message__box__upper-info__talker">
                       ${message.user_name}
