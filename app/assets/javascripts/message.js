@@ -44,4 +44,26 @@ $(function(){
     })
     return false;
   })
+
+  let reloadMessages = function () {
+    last_message_id = $('.main-message__box:last').data("message-id");
+    
+    $.ajax({
+      url: "api/messages",
+      type: 'GET',
+      dataType: 'json', 
+      data: {id: last_message_id} 
+    })
+    .done(function (messages) {
+      let insertHTML = '';
+      messages.forEach(function (message) {
+      insertHTML = buildHTML(message);
+      $('.main-message').append(insertHTML);
+      })
+      $('.main-message').animate({scrollTop: $('.main-message')[0].scrollHeight}, 'fast');
+    })
+    .fail(function () {
+      alert('自動更新に失敗しました');
+    });
+  }
 })
